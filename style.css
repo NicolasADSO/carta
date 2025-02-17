@@ -1,0 +1,161 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 1s forwards;
+    position: absolute;
+    top: 35%;
+    z-index: 2;
+}
+
+.image {
+    width: 80%; /* Reducimos el tamaño de la imagen */
+    max-width: 400px; /* Tamaño máximo de la imagen */
+    height: auto;
+    margin-top: 40px; /* Espaciado para que la imagen esté debajo del texto */
+    opacity: 0.8; /* Le da un efecto suave a la imagen */
+    animation: fadeIn 4s ease-in-out 2s forwards;
+    transition: transform 0.3s ease-in-out;
+    z-index: 0; /* Asegura que la imagen quede detrás del texto */
+}
+
+.image:hover {
+    transform: scale(1.05); /* Efecto de agrandar la imagen al pasar el ratón */
+}
+
+.btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.btn:hover {
+    background-color: #ff6347;
+}
+
+.btn:active {
+    transform: scale(0.9); /* Hace que el botón se encoja un poco cuando se haga clic */
+    transition: transform 0.2s;
+}
+
+/* Fondo dinámico */
+body {
+    background: linear-gradient(45deg, #ff6a00, #ff6347, #ff7f50);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* style.css */
+.nueva-seccion {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.nueva-seccion h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+}
+
+.nueva-seccion p {
+    font-size: 1.2rem;
+}
+
+
+.volver-btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.volver-btn:hover {
+    background-color: #45a049;
+}
+
+.imagen-sorpresa {
+    width: 50%; /* Ajusta el tamaño de la imagen al 80% del contenedor */
+    max-width: 200px; /* Limita el tamaño máximo de la imagen */
+    margin-top: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para la imagen */
+    display: block; /* Asegura que la imagen sea un bloque */
+    margin-left: auto;
+    margin-right: auto; /* Centra la imagen */
+}
+
